@@ -25,6 +25,10 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--background-color);
             color: var(--text-color);
@@ -118,209 +122,11 @@
             max-width: 900px;
         }
 
-        .guide-header {
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .guide-header h1 {
-            font-size: 2.5rem;
-            background: linear-gradient(90deg, var(--geode-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        .guide-header::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--geode-color), var(--secondary-color));
-            margin-top: 10px;
-            border-radius: 2px;
-        }
-
-        .guide-header p {
-            color: #b0b0b0;
-            font-size: 1.1rem;
-        }
-
-        .card {
-            background-color: var(--card-color);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border: 1px solid var(--border-color);
-        }
-
-        .card h2 {
-            color: var(--geode-color);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .card h3 {
-            color: var(--primary-color);
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            margin-bottom: 15px;
-        }
-
-        .card ul, .card ol {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        .card li {
-            margin-bottom: 8px;
-        }
-
-        code {
-            background-color: #1e1e1e;
-            color: #e7e7e7;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9em;
-        }
-
-        pre {
-            background-color: #1e1e1e;
-            padding: 15px;
-            border-radius: 6px;
-            overflow-x: auto;
-            margin-bottom: 15px;
-            border: 1px solid #333;
-        }
-
-        .warning {
-            background-color: rgba(255, 82, 82, 0.1);
-            border-left: 4px solid var(--accent-color);
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 0 6px 6px 0;
-        }
-
-        .warning h4 {
-            color: var(--accent-color);
-            margin-bottom: 8px;
-        }
-
-        .info {
-            background-color: rgba(66, 184, 131, 0.1);
-            border-left: 4px solid var(--geode-color);
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 0 6px 6px 0;
-        }
-
-        .info h4 {
-            color: var(--geode-color);
-            margin-bottom: 8px;
-        }
-
-        .step {
-            display: flex;
-            margin-bottom: 15px;
-            align-items: flex-start;
-        }
-
-        .step-number {
-            background: linear-gradient(135deg, var(--geode-color), var(--secondary-color));
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-            font-weight: bold;
-        }
-
-        .step-content {
-            flex: 1;
-        }
-
-        .button {
-            display: inline-block;
-            background: linear-gradient(90deg, var(--geode-color), var(--secondary-color));
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 10px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(66, 184, 131, 0.3);
-        }
-
-        .mod-card {
-            background-color: #252525;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 15px;
-            transition: transform 0.2s;
-        }
-
-        .mod-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .mod-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .mod-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        .mod-author {
-            font-size: 0.9rem;
-            color: #999;
-        }
-
-        .mod-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            margin-bottom: 10px;
-        }
-
-        .mod-tag {
-            background-color: rgba(125, 62, 255, 0.2);
-            color: #b69fff;
-            font-size: 0.8rem;
-            padding: 3px 8px;
-            border-radius: 20px;
-            font-weight: 500;
-        }
-
         @media (max-width: 768px) {
             .sidebar {
                 display: none;
             }
-            
+
             .content {
                 margin-left: 0;
                 max-width: 100%;
@@ -331,7 +137,7 @@
 <body>
     <header>
         <h1>
-            <img src="/api/placeholder/32/32" alt="GD Icon"> Geometry Dash Hacks Guide
+            <img src="https://via.placeholder.com/32" alt="GD Icon"> Geometry Dash Hacks Guide
         </h1>
     </header>
 
@@ -339,298 +145,39 @@
         <div class="sidebar">
             <h2>Navigation</h2>
             <ul>
-                <li><a href="#" class="active">Getting Started</a></li>
-                <li><a href="#">Installing Geode</a></li>
-                <li><a href="#">Finding & Installing Mods</a></li>
-                <li><a href="#">Popular Mods</a></li>
-                <li><a href="#">Noclip</a></li>
-                <li><a href="#">Global Hooks</a></li>
-                <li><a href="#">Practice Music Hack</a></li>
-                <li><a href="#">Texture Packs</a></li>
-                <li><a href="#">FPS Bypass</a></li>
-                <li><a href="#">Creating Your Own Mods</a></li>
-                <li><a href="#">Troubleshooting</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="#getting-started" class="active">Getting Started</a></li>
+                <li><a href="#installing-geode">Installing Geode</a></li>
+                <li><a href="#installing-mods">Installing Mods</a></li>
+                <li><a href="#popular-mods">Popular Mods</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
             </ul>
         </div>
 
         <div class="content">
-            <div class="guide-header">
-                <h1>Geometry Dash Hacks Guide</h1>
-                <p>A comprehensive guide to modding Geometry Dash with Geode</p>
-            </div>
-
-            <div class="card">
+            <!-- Sections should be updated with IDs for navigation -->
+            <div class="card" id="getting-started">
                 <h2>What is Geode?</h2>
-                <p>Geode is a modern, open-source mod loader for Geometry Dash that allows you to easily install, manage, and create mods for the game. Unlike older modding methods, Geode provides a unified platform with a proper SDK, making modding more accessible and sustainable.</p>
-                
-                <div class="info">
-                    <h4>Geode Benefits</h4>
-                    <p>Geode offers several advantages over older modding methods:</p>
-                    <ul>
-                        <li>Seamless installation and mod management</li>
-                        <li>Better compatibility between mods</li>
-                        <li>Proper versioning and dependency management</li>
-                        <li>In-game mod browser and installer</li>
-                        <li>Support for all major platforms (Windows, macOS, Android)</li>
-                    </ul>
-                </div>
-                
-                <div class="warning">
-                    <h4>Important Note</h4>
-                    <p>While Geode itself is designed to be safe for your game, always be cautious when installing mods from unknown sources. Using certain mods (especially those that modify gameplay) may be against the game's terms of service. These modifications should be used responsibly and primarily for personal enjoyment or practice purposes.</p>
-                </div>
+                <p>Geode is a modern, open-source mod loader for Geometry Dash...</p>
             </div>
 
-            <div class="card">
+            <div class="card" id="installing-geode">
                 <h2>Installing Geode</h2>
-                <p>Follow these steps to install Geode on your system:</p>
-
-                <h3>Prerequisites</h3>
-                <ul>
-                    <li>A legitimate copy of Geometry Dash</li>
-                    <li>Administrator privileges on your device</li>
-                    <li>Backup of your save files (recommended)</li>
-                </ul>
-
-                <h3>Windows Installation</h3>
-                
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <p>Visit the official Geode website at <code>geode-sdk.org</code> and download the latest installer for Windows.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <p>Close Geometry Dash if it's currently running.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <p>Run the Geode installer and follow the on-screen instructions.</p>
-                        <p>Make sure to select the correct path to your Geometry Dash installation if it's not automatically detected.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <p>Once installation is complete, launch Geometry Dash. You should see a Geode menu button in the main menu.</p>
-                    </div>
-                </div>
-
-                <h3>Android Installation</h3>
-                
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <p>Download the latest APK from the official Geode website or GitHub page.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <p>Install the APK (you may need to allow installation from unknown sources in your device settings).</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <p>Launch the Geode version of Geometry Dash. You'll see the Geode menu in the main screen.</p>
-                    </div>
-                </div>
-                
-                <a href="#" class="button">Next: Finding & Installing Mods →</a>
+                <p>Follow these steps to install Geode on your system...</p>
             </div>
 
-            <div class="card">
-                <h2>Popular Mods</h2>
-                <p>Here are some of the most useful and popular mods available for Geometry Dash:</p>
-
-                <div class="mod-card">
-                    <div class="mod-header">
-                        <div class="mod-title">BetterInfo</div>
-                        <div class="mod-author">by Cvolton</div>
-                    </div>
-                    <div class="mod-tags">
-                        <span class="mod-tag">Utility</span>
-                        <span class="mod-tag">Level Info</span>
-                    </div>
-                    <p>Enhances the level information screen with additional statistics, level analysis tools, and more detailed information about creators and songs.</p>
-                </div>
-
-                <div class="mod-card">
-                    <div class="mod-header">
-                        <div class="mod-title">Noclip</div>
-                        <div class="mod-author">by mat</div>
-                    </div>
-                    <div class="mod-tags">
-                        <span class="mod-tag">Gameplay</span>
-                        <span class="mod-tag">Practice</span>
-                    </div>
-                    <p>Allows you to pass through objects without dying, perfect for practicing difficult sections or analyzing level design. Toggle with a customizable keybind.</p>
-                </div>
-
-                <div class="mod-card">
-                    <div class="mod-header">
-                        <div class="mod-title">Practice Music Hack</div>
-                        <div class="mod-author">by hjfod</div>
-                    </div>
-                    <div class="mod-tags">
-                        <span class="mod-tag">Audio</span>
-                        <span class="mod-tag">Practice</span>
-                    </div>
-                    <p>Keeps the music playing normally in practice mode instead of restarting every time you respawn at a checkpoint.</p>
-                </div>
-
-                <div class="mod-card">
-                    <div class="mod-header">
-                        <div class="mod-title">FPS Bypass</div>
-                        <div class="mod-author">by matcool</div>
-                    </div>
-                    <div class="mod-tags">
-                        <span class="mod-tag">Performance</span>
-                        <span class="mod-tag">Graphics</span>
-                    </div>
-                    <p>Allows you to run the game at higher frame rates than the default 60 FPS, providing smoother gameplay and potentially more consistent timing.</p>
-                </div>
-
-                <div class="mod-card">
-                    <div class="mod-header">
-                        <div class="mod-title">Global Hooks</div>
-                        <div class="mod-author">by Geode Team</div>
-                    </div>
-                    <div class="mod-tags">
-                        <span class="mod-tag">Utility</span>
-                        <span class="mod-tag">Core</span>
-                    </div>
-                    <p>A utility mod that provides convenient hooks, callbacks, and functions for other mods. Usually installed automatically as a dependency for other mods.</p>
-                </div>
-
-                <div class="mod-card">
-                    <div class="mod-header">
-                        <div class="mod-title">Texture Loader</div>
-                        <div class="mod-author">by TheSillyDoggo</div>
-                    </div>
-                    <div class="mod-tags">
-                        <span class="mod-tag">Customization</span>
-                        <span class="mod-tag">Visual</span>
-                    </div>
-                    <p>Allows you to load and switch between custom texture packs to change the game's appearance.</p>
-                </div>
-            </div>
-
-            <div class="card">
+            <div class="card" id="installing-mods">
                 <h2>Installing Mods with Geode</h2>
-                <p>Geode makes installing mods incredibly simple. Here's how to do it:</p>
-
-                <h3>In-Game Mod Browser</h3>
-                
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <p>Launch Geometry Dash with Geode installed.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <p>Click on the Geode icon in the main menu.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <p>Navigate to the "Get Mods" section.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <p>Browse or search for mods, then click "Install" on the ones you want.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <p>Restart Geometry Dash when prompted to apply changes.</p>
-                    </div>
-                </div>
-
-                <h3>Manual Installation</h3>
-                
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <p>Download the <code>.geode</code> mod file from a trusted source.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <p>Place the file in your Geometry Dash mods folder:</p>
-                        <p>Windows: <code>C:\Program Files (x86)\Steam\steamapps\common\Geometry Dash\geode\mods</code></p>
-                        <p>Mac: <code>~/Library/Application Support/Geometry Dash/geode/mods</code></p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <p>Launch Geometry Dash, and the mod should be automatically loaded.</p>
-                    </div>
-                </div>
-                
-                <a href="#" class="button">Next: Using Noclip Mod →</a>
+                <p>Geode makes installing mods incredibly simple...</p>
             </div>
 
-            <div class="card">
+            <div class="card" id="popular-mods">
+                <h2>Popular Mods</h2>
+                <p>Here are some of the most useful and popular mods available...</p>
+            </div>
+
+            <div class="card" id="troubleshooting">
                 <h2>Troubleshooting</h2>
-                <p>Encountering issues with Geode or your mods? Here are some common problems and solutions:</p>
-
-                <h3>Game Crashes on Startup</h3>
-                <ul>
-                    <li>Make sure your Geometry Dash and Geode versions are compatible.</li>
-                    <li>Try disabling all mods and enabling them one by one to identify problematic mods.</li>
-                    <li>Check the Geode logs for error messages (located in the Geode folder).</li>
-                    <li>Reinstall Geode if problems persist.</li>
-                </ul>
-
-                <h3>Mods Not Working</h3>
-                <ul>
-                    <li>Ensure the mod is enabled in the Geode settings.</li>
-                    <li>Check if the mod requires dependencies that aren't installed.</li>
-                    <li>Verify that you're using the correct keybinds to activate the mod.</li>
-                    <li>Try reinstalling the mod.</li>
-                </ul>
-
-                <h3>Save Data Issues</h3>
-                <ul>
-                    <li>Geode should not affect your save data, but always keep backups just in case.</li>
-                    <li>If your save data is corrupted, restore from your backup or try the save repair tools.</li>
-                </ul>
-                
-                <div class="info">
-                    <h4>Get Help</h4>
-                    <p>If you're still having issues, you can get help from the Geode community:</p>
-                    <ul>
-                        <li>Join the official Geode Discord server</li>
-                        <li>Check the GitHub issues page</li>
-                        <li>Visit the Geometry Dash modding forums</li>
-                    </ul>
-                </div>
+                <p>Encountering issues with Geode or your mods? Here are some common problems and solutions...</p>
             </div>
         </div>
     </div>
